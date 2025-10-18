@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>World Cafe & Water Park — Demo</title>
+  <style>
+    /* Reset + full-screen image utility */
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid;
+      place-items: center;
+      background: #f3f4f6;
+    }
+    .fullscreen {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .fullscreen img {
+      width: min(100vw, 1400px);
+      max-width: 95vw;
+      height: auto;
+      object-fit: contain;
+      image-rendering: auto;
+    }
+    /* Optional subtle gradient background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(1200px 800px at 70% 30%, #ffffff 0%, #e5e7eb 60%, #d1d5db 100%);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="fullscreen" role="main">
+    <img src="assets/hero.png" alt="World Cafe and Water Park Logo" />
+  </main>
+</body>
+</html>
